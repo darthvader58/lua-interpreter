@@ -286,6 +286,7 @@ func (l *Lexer) readLongString() string {
 		}
 		if l.ch == ']' && l.peekChar() == ']' {
 			l.readChar() // skip first ]
+			l.readChar() // skip second ] - THIS WAS THE BUG FIX
 			break
 		}
 		result.WriteByte(l.ch)

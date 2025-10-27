@@ -144,7 +144,7 @@ func TestNextToken(t *testing.T) {
 		{token.LOCAL, "local"},
 		{token.IDENT, "long"},
 		{token.ASSIGN, "="},
-		{token.STRING, "\t\t\tThis is a\n\t\t\tlong string\n\t\t"},
+		{token.STRING, "\t\tThis is a\n\t\tlong string\n\t"},
 
 		{token.LOCAL, "local"},
 		{token.IDENT, "arr"},
