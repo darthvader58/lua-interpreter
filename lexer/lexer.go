@@ -130,10 +130,6 @@ func (l *Lexer) NextToken() token.Token {
 			ch := l.ch
 			l.readChar()
 			tok = token.Token{Type: token.CONCAT, Literal: string(ch) + string(l.ch)}
-		} else if isDigit(l.peekChar()) {
-			tok.Type = token.NUMBER
-			tok.Literal = l.readNumber()
-			return tok
 		} else {
 			tok = newToken(token.DOT, l.ch)
 		}

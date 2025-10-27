@@ -2,11 +2,11 @@
 
 # Build the interpreter
 build:
-	go build -o lua-go .
+	go build -o lua-interpreter .
 
 # Run the REPL
 run: build
-	./lua-go
+	./lua-interpreter
 
 # Run the REPL without building binary
 repl:
@@ -26,7 +26,7 @@ test-lexer:
 
 # Clean build artifacts
 clean:
-	rm -f lua-go
+	rm -f lua-interpreter
 	go clean
 
 # Format code
